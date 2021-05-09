@@ -21,10 +21,10 @@ const Game = () => {
     setXisNext(!xIsNext);
   };
 
-  const jumpTo = (step) => {
+  const jumpTo = step => {
     setStepNumber(step);
     setXisNext(step % 2 === 0);
-  }
+  };
 
   const renderMoves = () =>
     history.map((_step, move) => {
