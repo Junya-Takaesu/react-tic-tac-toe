@@ -18,6 +18,13 @@ body {
 
 h1 {
   margin: 2rem;
+  text-align: center;
+}
+
+.game-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
 }
 
 .board {
@@ -47,8 +54,7 @@ h1 {
 }
 
 .info-wrapper {
-  display: flex;
-  justify-content: space-between;
+
 }
 
 h3 {
