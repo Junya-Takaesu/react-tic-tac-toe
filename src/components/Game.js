@@ -26,13 +26,14 @@ const Game = () => {
     setXisNext(step % 2 === 0);
   };
 
-  const renderMoves = () =>
+  const renderMoves = currentStep =>
     history.map((_step, move) => {
       const destination = move ? `Go to move #${move}` : "Go to Start";
       return (
         <li kye={move}>
           <button
             onClick={() => jumpTo(move)}
+            className={move === currentStep ? "current" : ""}
           >
             {destination}
           </button>
@@ -49,7 +50,7 @@ const Game = () => {
         <div className="info-wrapper">
           <div>
             <h3>History</h3>
-            {renderMoves()}
+            {renderMoves(stepNumber)}
           </div>
         </div>
       </div>
