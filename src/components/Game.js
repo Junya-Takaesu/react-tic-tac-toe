@@ -31,7 +31,11 @@ const Game = () => {
       const destination = move ? `Go to move #${move}` : "Go to Start";
       return (
         <li kye={move}>
-          <button onClick={() => jumpTo(move)}>{destination}</button>
+          <button
+            onClick={() => jumpTo(move)}
+          >
+            {destination}
+          </button>
         </li>
       );
     });
